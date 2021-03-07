@@ -190,8 +190,10 @@ console.log(familyPhoto);
 /***   作業 5 填答區結束   **/
 
 /***   作業 6 填答區開始   **/
-let sellingVillas = [
-  {
+const hexVilla = {
+  city: 'Kaohsiung',
+  title: '六角大別墅',
+  items: [{
     price: 280000000,
     pingsNum: 900,
     haveSwimmingPool: false,
@@ -211,9 +213,10 @@ let sellingVillas = [
     haveHousekeeper: true,
     isSell: false,
   }
-];
+  ]
+}
 //印出
-console.log(sellingVillas);
+console.log(hexVilla);
 
 
 /***   作業 6 填答區結束   **/
@@ -307,12 +310,12 @@ let salaryData = {
 //第一位員工加薪邏輯
 if (salaryData.staff[0].salary <= 40000) {
   //第一位員工加薪程式碼
-  salaryData.staff[0].salary = 40000;
+  salaryData.staff[0].salary += 40000 - salaryData.staff[0].salary;
 };
 //第二位員工加薪邏輯
 if (salaryData.staff[1].salary <= 40000) {
   //第二位員工加薪程式碼
-  salaryData.staff[1].salary = 40000;
+  salaryData.staff[1].salary += 40000 - salaryData.staff[1].salary;
 };
 //目前Bob薪水
 console.log(`目前Bob薪水為${salaryData.staff[0].salary}元`);
